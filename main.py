@@ -4,19 +4,40 @@
 # - 7 -> да
 # - 1 -> нет
 
+# my_var
 # day_num = int(input('Введите номер дня недели: '))
 # if day_num == 6 or day_num == 7:
 #     print('да')
 # else:
 #     print('нет')
 
+# alt_var с созданием словаря значений
+# day = int(input())
+# day_name = {1: 'Понедельник',
+#             2: 'Вторник',
+#             3: 'Среда',
+#             4: 'Четверг',
+#             5: 'Пятница',
+#             6: 'Суббота',
+#             7: 'Воскресенье'}
+# print(day_name.get(day, 'Такого дня недели не существует'))
+
 # 7. Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
+# my_var
 # for x in range(2):
 #         for y in range(2):
 #             for z in range(2):
 #                 print('Для X =', x,', Y =', y,', Z =', z)
 #                 print(not (x or y or z) == (not x and not y and not z))
+
+# alt_var через двоичный код
+# for i in range(0b111 + 1):
+#     binary_string = format(i, '03b')
+#     x = int(binary_string[0])
+#     y = int(binary_string[1])
+#     z = int(binary_string[2])
+#     print(f'¬({x} ⋁ {y} ⋁ {z}) = ¬{x} ⋀ ¬{y} ⋀ ¬{z} есть {not (x or y or z) == ((not x) and (not y) and (not z))}')
 
 # 8. Напишите программу, которая принимает на вход координаты точки (X и Y),
 # причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости,
@@ -62,10 +83,23 @@
 # - A (3,6); B (2,1) -> 5,09
 # - A (7,-5); B (1,-1) -> 7,21
 
-x1, y1 = map(float, input('Введите координаты точки 1: ').split(','))
-x2, y2 = map(float, input('Введите координаты точки 2: ').split(','))
-distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
-distance *= 100
-distance = int(distance)
-distance = float(distance / 100)
-print('Расстояние между точками =', distance) # (f'Расстояние между точками = {distance:.2f}')
+# my_var
+# x1, y1 = map(float, input('Введите координаты точки 1: ').split(','))
+# x2, y2 = map(float, input('Введите координаты точки 2: ').split(','))
+# distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+# distance *= 100
+# distance = int(distance)
+# distance = float(distance / 100)
+# print('Расстояние между точками =', distance) # (f'Расстояние между точками = {distance:.2f}')
+
+# alt_var с использованием math и разными типами вывода
+# import math
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+# ac = y2 - y1
+# bc = x2 - x1
+# print(round((ac ** 2 + bc ** 2) ** 0.5, 2))
+# print(int(math.sqrt(ac ** 2 + bc ** 2) * 100) / 100)
+# print(str(math.sqrt(ac ** 2 + bc ** 2)).split('.')[0] + '.' + str(math.sqrt(ac ** 2 + bc ** 2)).split('.')[1][:2])
